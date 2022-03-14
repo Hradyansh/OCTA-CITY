@@ -31,7 +31,7 @@ window.onload = function() {
 //FETCH MOVIE FROM API USING ID
 async function fetchMovieDate(id){
 
-  const response = await fetch(`http://www.omdbapi.com/?i=${id}&apikey=2b172a0c`);
+  const response = await fetch(`https://www.omdbapi.com/?i=${id}&apikey=2b172a0c`);
 
   const data = await response.json();
 
