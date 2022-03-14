@@ -82,7 +82,7 @@ searchInputField.addEventListener('keyup', (event) => {
       searchDropDown.innerHTML = html;
 
     });
-  }, 450)
+  }, 250)
 })
 
 
