@@ -12,7 +12,7 @@ let movieData = [];
 //FETCH FUNCTION BY SENDING ID
 async function getMovieData(id) {
   // console.log(pageNumber);
-  let url = `http://www.omdbapi.com/?i=${id}&apikey=2b172a0c`;
+  let url = `https://www.omdbapi.com/?i=${id}&apikey=2b172a0c`;
   const response = await fetch(url);
 
   const data = await response.json();
