@@ -5,6 +5,23 @@ const displayDiv = document.querySelector('.movie_Info')
 let movieData = [];
 //********
 
+
+
+//------------------------------------------------------------------------------
+//LISTENERS
+//------------------------------------------------------------------------------
+
+//FUCNTION TO GET ID FROM THE URL
+window.onload = function () {
+  var url = document.location.href;
+  var params = url.split('?')[1],
+  console.log(params.split('=')[1]);
+  let imdbID =  params.split('=')[1];
+  getMovieData(imdbID);
+
+}
+
+
 //------------------------------------------------------------------------------
 //HELPER FUNCTIONS
 //------------------------------------------------------------------------------
@@ -57,20 +74,5 @@ function display(movieData) {
   }).join('');
 
   displayDiv.innerHTML = html;
-
-}
-
-//------------------------------------------------------------------------------
-//LISTENERS
-//------------------------------------------------------------------------------
-
-//FUCNTION TO GET ID FROM THE URL
-window.onload = function () {
-  var url = document
-  .location.href,
-  params = url.split('?')[1],
-  console.log(params.split('=')[1]);
-  let imdbID =  params.split('=')[1];
-  getMovieData(imdbID);
 
 }
