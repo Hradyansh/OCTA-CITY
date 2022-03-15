@@ -15,7 +15,7 @@ let movieData = [];
 window.onload = function () {
   var url = document.location.href;
   var params = url.split('?')[1],
-  console.log(params.split('=')[1]);
+//   console.log(params.split('=')[1]);
   let imdbID =  params.split('=')[1];
   getMovieData(imdbID);
 
